@@ -154,3 +154,71 @@ if configuration.get('scheduler.enabled'):
 # after defining tables, uncomment below to enable auditing
 # -------------------------------------------------------------------------
 # auth.enable_record_versioning(db)
+
+
+db.define_table('tradebook_front_running',
+                Field('trade_id', requires=IS_NOT_EMPTY() ),
+                Field('trade_date', requires=IS_NOT_EMPTY() ),
+                Field('trade_time', requires=IS_TIME(error_message='must be HH:MM:SS!') ),
+                Field('Client_Type',  requires=IS_IN_SET(['FIRM','CUSTOMER'])),
+                Field('Client_ID', requires=IS_NOT_EMPTY()),
+                Field('stockSymbol', requires=IS_IN_SET(['AAPL','FB', 'WMT'])),
+                Field('securityType', requires=IS_IN_SET(['EQUITY'])),
+                Field('trade_action', requires=IS_IN_SET(['BUY','SELL'])),
+                Field('quantity', requires=IS_NOT_EMPTY()),
+                Field('price', requires=IS_NOT_EMPTY()),
+                Field('brokerID', requires=IS_NOT_EMPTY())
+                )
+
+db.define_table('front_running_SSB',
+                Field('trade_id', requires=IS_NOT_EMPTY() ),
+                Field('trade_date'),
+                Field('trade_time', requires=IS_TIME(error_message='must be HH:MM:SS!') ),
+                Field('Client_Type',  requires=IS_IN_SET(['FIRM','CUSTOMER'])),
+                Field('Client_ID', requires=IS_NOT_EMPTY()),
+                Field('stockSymbol', requires=IS_IN_SET(['AAPL','FB', 'WMT'])),
+                Field('securityType', requires=IS_IN_SET(['EQUITY'])),
+                Field('trade_action', requires=IS_IN_SET(['BUY','SELL'])),
+                Field('quantity', requires=IS_NOT_EMPTY()),
+                Field('price', requires=IS_NOT_EMPTY()),
+                Field('brokerID', requires=IS_NOT_EMPTY())
+                )
+
+
+db.define_table('front_running_BBS',
+                Field('trade_id', requires=IS_NOT_EMPTY() ),
+                Field('trade_date'),
+                Field('trade_time', requires=IS_TIME(error_message='must be HH:MM:SS!') ),
+                Field('Client_Type',  requires=IS_IN_SET(['FIRM','CUSTOMER'])),
+                Field('Client_ID', requires=IS_NOT_EMPTY()),
+                Field('stockSymbol', requires=IS_IN_SET(['AAPL','FB', 'WMT'])),
+                Field('securityType', requires=IS_IN_SET(['EQUITY'])),
+                Field('trade_action', requires=IS_IN_SET(['BUY','SELL'])),
+                Field('quantity', requires=IS_NOT_EMPTY()),
+                Field('price', requires=IS_NOT_EMPTY()),
+                Field('brokerID', requires=IS_NOT_EMPTY())
+                )
+
+
+
+db.define_table('wash_trade_db',
+               Field('brokerId'),
+               Field('firstname'),
+               Field('lastname'),
+               Field('email'),
+               Field('stockSymbol')
+                )
+
+db.define_table('tradebook_wash',
+                Field('trade_id', requires=IS_NOT_EMPTY() ),
+                Field('trade_date'),
+                Field('trade_time', requires=IS_TIME(error_message='must be HH:MM:SS!') ),
+                Field('Client_Type',  requires=IS_IN_SET(['FIRM','CUSTOMER'])),
+                Field('Client_ID', requires=IS_NOT_EMPTY()),
+                Field('stockSymbol', requires=IS_IN_SET(['AAPL','FB', 'WMT'])),
+                Field('securityType', requires=IS_IN_SET(['EQUITY'])),
+                Field('trade_action', requires=IS_IN_SET(['BUY','SELL'])),
+                Field('quantity', requires=IS_NOT_EMPTY()),
+                Field('price', requires=IS_NOT_EMPTY()),
+                Field('brokerID', requires=IS_NOT_EMPTY())
+                )

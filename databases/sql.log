@@ -53,3 +53,93 @@ CREATE TABLE "auth_cas"(
     "renew" CHAR(1)
 );
 success!
+timestamp: 2020-09-16T15:56:39.621358
+CREATE TABLE "tradebook_front_running"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "trade_id" CHAR(512),
+    "trade_date" CHAR(512),
+    "trade_time" CHAR(512),
+    "Client_Type" CHAR(512),
+    "Client_ID" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "securityType" CHAR(512),
+    "trade_action" CHAR(512),
+    "quantity" CHAR(512),
+    "price" CHAR(512),
+    "brokerID" CHAR(512)
+);
+success!
+timestamp: 2020-09-16T15:56:39.653271
+CREATE TABLE "front_running_SSB"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "trade_id" CHAR(512),
+    "trade_date" CHAR(512),
+    "trade_time" CHAR(512),
+    "Client_Type" CHAR(512),
+    "Client_ID" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "securityType" CHAR(512),
+    "trade_action" CHAR(512),
+    "quantity" CHAR(512),
+    "price" CHAR(512),
+    "brokerID" CHAR(512)
+);
+success!
+timestamp: 2020-09-16T15:56:39.672222
+CREATE TABLE "front_running_BBS"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "trade_id" CHAR(512),
+    "trade_date" CHAR(512),
+    "trade_time" CHAR(512),
+    "Client_Type" CHAR(512),
+    "Client_ID" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "securityType" CHAR(512),
+    "trade_action" CHAR(512),
+    "quantity" CHAR(512),
+    "price" CHAR(512),
+    "brokerID" CHAR(512)
+);
+success!
+timestamp: 2020-09-16T15:56:39.686185
+CREATE TABLE "wash_trade_db"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "brokerId" CHAR(512),
+    "firstname" CHAR(512),
+    "lastname" CHAR(512),
+    "email" CHAR(512),
+    "stockSymbol" CHAR(512)
+);
+success!
+timestamp: 2020-09-16T15:56:39.747365
+CREATE TABLE "tradebook_wash"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "trade_id" CHAR(512),
+    "trade_date" CHAR(512),
+    "trade_time" CHAR(512),
+    "Client_Type" CHAR(512),
+    "Client_ID" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "securityType" CHAR(512),
+    "trade_action" CHAR(512),
+    "quantity" CHAR(512),
+    "price" CHAR(512),
+    "brokerID" CHAR(512)
+);
+success!
+timestamp: 2020-09-16T16:07:38.480532
+CREATE TABLE "tradebook"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "trade_id" CHAR(512),
+    "trade_date" CHAR(512),
+    "trade_time" CHAR(512),
+    "Client_Type" CHAR(512),
+    "Client_ID" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "securityType" CHAR(512),
+    "trade_action" CHAR(512),
+    "quantity" CHAR(512),
+    "price" CHAR(512),
+    "brokerID" CHAR(512)
+);
+success!

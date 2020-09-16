@@ -1,0 +1,22 @@
+{{extend 'layout.html'}}
+<h1>
+    View Trade History
+<!--     <a href="../tradebook/view_washtrade_table" class="btn btn-primary float-right m-1" role="button">Check Wash Trade</a>
+    <a href="../tradebook/post" class="btn btn-primary float-right m-1" role="button">Add Trade</a>
+    <a href="../tradebook/get_data_for_frontrunning" class="btn btn-primary float-right m-1" role="button">Detect Fraud</a> -->
+</h1>
+</div>
+<!-- id trade_id trade_date trade_time Client_Type Client_ID stockSymbol secuirtType trade_action quanity price brokerID -->
+<!-- {{=rows}} -->
+<div >
+  <table class="table table-striped">
+    <thead>
+        <tr><th>Trade ID</th><th >Date</th><th>Time</th> <th>Client Type</th><th> Client ID</th><th> Stock Symbol</th><th> Security Type</th> <th>Trade action</th> <th>Quanity</th><th> Price </th><th>Broker ID</th></tr>
+</thead>
+<tbody>
+{{for x in rows: }}
+    <tr><td>{{=x.trade_id}}</td><td >{{=x.trade_date}}</td><td>{{=x.trade_time}}</td><td>{{=x.Client_Type}}</td><td>{{=x.Client_ID}}</td><td>{{=x.stockSymbol}}</td><td>{{=x.securityType}}</td><td>{{=x.trade_action}}</td><td>{{=x.quantity}}</td><td>{{=x.price}}</td><td>{{=x.brokerID}}</td></tr>
+
+{{ pass}}
+</tbody>
+</table>

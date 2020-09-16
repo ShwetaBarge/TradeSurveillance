@@ -2,3 +2,10 @@
 [2020-09-16 15:51:49] CREATE tradebook.py: 0
 [2020-09-16 15:53:44] EDIT watchDogs/models/db.py: 1
 [2020-09-16 15:55:43] EDIT watchDogs/models/db.py: 59
+[2020-09-16 16:02:12] EDIT watchDogs/controllers/tradebook.py: 5
+[2020-09-16 16:05:28] EDIT watchDogs/controllers/tradebook.py: 0
+[2020-09-16 16:05:49] CREATE tradebook/view.html: 0
+[2020-09-16 16:06:24] EDIT watchDogs/views/tradebook/view.html: 18
+[2020-09-16 16:06:52] EDIT watchDogs/views/tradebook/view.html: 0
+[2020-09-16 16:07:27] EDIT watchDogs/controllers/tradebook.py: 0
+[2020-09-16 16:07:37] EDIT watchDogs/models/db.py: 0

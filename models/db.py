@@ -156,7 +156,7 @@ if configuration.get('scheduler.enabled'):
 # auth.enable_record_versioning(db)
 
 
-db.define_table('tradebook_front_running',
+db.define_table('tradebook',
                 Field('trade_id', requires=IS_NOT_EMPTY() ),
                 Field('trade_date', requires=IS_NOT_EMPTY() ),
                 Field('trade_time', requires=IS_TIME(error_message='must be HH:MM:SS!') ),
