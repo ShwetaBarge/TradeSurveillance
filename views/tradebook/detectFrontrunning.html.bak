@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+<h1>This is the tradebook/detectFrontrunning.html template</h1>
+{{=BEAUTIFY(response._vars)}}
+
+<!-- {{=potentialList}}
+<br>
+<br>
+<br>
+{{=firmTradeList}} -->

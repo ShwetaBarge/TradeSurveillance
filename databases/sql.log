@@ -143,3 +143,98 @@ CREATE TABLE "tradebook"(
     "brokerID" CHAR(512)
 );
 success!
+timestamp: 2020-09-16T19:14:41.343621
+CREATE TABLE "broker"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "Broker_Id" CHAR(512),
+    "Broker_Name" CHAR(512),
+    "Email" CHAR(512)
+);
+success!
+timestamp: 2020-09-16T19:33:19.858812
+ALTER TABLE "wash_trade_db" ADD "Broker_Id" CHAR(512);
+timestamp: 2020-09-16T19:33:19.994131
+ALTER TABLE "wash_trade_db" ADD "Broker_Name" CHAR(512);
+timestamp: 2020-09-16T19:33:20.184812
+ALTER TABLE "wash_trade_db" ADD "Date_trade" CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2020-09-16T19:43:04.376002
+CREATE TABLE "wash_trade_db_1"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "Broker_Id" CHAR(512),
+    "Broker_Name" CHAR(512),
+    "Email" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "Date_trade" CHAR(512)
+);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2020-09-16T19:53:30.679491
+CREATE TABLE "wash_trade_broker"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "Broker_Id" CHAR(512),
+    "Broker_Name" CHAR(512),
+    "Email" CHAR(512),
+    "stockSymbol" CHAR(512),
+    "date_trade" CHAR(512)
+);
+success!

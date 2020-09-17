@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+<!-- <h1>This is the tradebook/view_washtrade.html template</h1>
+{{=BEAUTIFY(response._vars)}} -->
+<h1>Data for wash trade
+    <a href="../tradebook/get_data_washtrade" class="btn btn-primary float-right m-1" role="button">Find Broker</a>
+</h1>
+<div>
+  <table class="table table-striped">
+    <thead>
+        <tr><th>Trade ID</th><th >Date</th><th>Time</th> <th>Client Type</th><th> Client ID</th><th> Stock Symbol</th><th> Security Type</th> <th>Trade action</th> <th>Quanity Price </th><th>Broker ID</th></tr>
+</thead>
+<tbody>
+{{for x in rows: }}
+    <tr><td>{{=x.trade_id}}</td><td >{{=x.trade_date}}</td><td>{{=x.trade_time}}</td><td>{{=x.Client_Type}}</td><td>{{=x.Client_ID}}</td><td>{{=x.stockSymbol}}</td><td>{{=x.trade_action}}</td><td>{{=x.quantity}}</td><td>{{=x.price}}</td><td>{{=x.brokerID}}</td></tr>
+
+{{ pass}}
+</tbody>
+</table>

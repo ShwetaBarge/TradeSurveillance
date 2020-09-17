@@ -1,0 +1,3 @@
+{{extend 'layout.html'}}
+<h1>This is the tradebook/get_data_for_frontrunning.html template</h1>
+{{=BEAUTIFY(response._vars)}}

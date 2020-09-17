@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<!-- <h1>Brokers Involved in Wash Trades</h1>
+<div class= "container">
+  <table class="table table-striped">
+    <thead>
+        <tr><th>ID</th><th >Broker Id</th><th>Broker Name</th><th> Email</th><th> Stock Symbol</th><th>Date</th></tr>
+</thead>
+<tbody>
+{{for x in rows: }}
+    <tr><td>{{=x.id}}</td><td >{{=x.Broker_Id}}</td><td>{{=x.Broker_Name}}</td><td>{{=x.Email}}</td><td>{{=x.stockSymbol}}</td><td>{{=x.date_trade}}</td></tr>
+
+{{ pass}}
+</tbody>
+</table>
+ -->
+
+{{=firmTradeList}}

@@ -1,0 +1,35 @@
+{{extend 'layout.html'}}
+<h1>This is the tradebook/get_data_for_frontrunning.html template</h1>
+<p>
+    <h1>Front Running SSB Scenario</h1>
+{{=A(T('Download as csv'), _type='button float-right', _href=URL('tradebook', 'export_to_csv_front_running_SSB'))}}
+</p>
+<div >
+  <table class="table table-striped">
+    <thead>
+        <tr><th>Trade ID</th><th>Date</th><th>Time</th> <th>Client Type</th><th> Client ID</th><th> Stock Symbol</th><th> Security Type</th> <th>Trade action</th> <th>Quanity</th><th> Price </th><th>Broker ID</th></tr>
+</thead>
+<tbody>
+{{for x in front_running_SSB: }}
+    <tr><td>{{=x.trade_id}}</td><td>{{=x.trade_date}}</td><td>{{=x.trade_time}}</td><td>{{=x.Client_Type}}</td><td>{{=x.Client_ID}}</td><td>{{=x.stockSymbol}}</td><td>{{=x.securityType}}</td><td>{{=x.trade_action}}</td><td>{{=x.quantity}}</td><td>{{=x.price}}</td><td>{{=x.brokerID}}</td></tr>
+
+{{ pass}}
+</tbody>
+</table>
+</div>
+<h1><br><hr><br>Front Running BBS Scenario</h1>
+{{=A(T('Download as csv'), _type='button float-right', _href=URL('tradebook', 'export_to_csv_front_running_BBS'))}}
+<div >
+  <table class="table table-striped">
+    <thead>
+        <tr><th>Trade ID</th><th>Date</th><th>Time</th> <th>Client Type</th><th> Client ID</th><th> Stock Symbol</th><th> Security Type</th> <th>Trade action</th> <th>Quanity</th><th>Price </th><th>Broker ID</th></tr>
+</thead>
+<tbody>
+{{for x in front_running_BBS: }}
+    <tr><td>{{=x.trade_id}}</td><td>{{=x.trade_date}}</td><td>{{=x.trade_time}}</td><td>{{=x.Client_Type}}</td><td>{{=x.Client_ID}}</td><td>{{=x.stockSymbol}}</td><td>{{=x.securityType}}</td><td>{{=x.trade_action}}</td><td>{{=x.quantity}}</td><td>{{=x.price}}</td><td>{{=x.brokerID}}</td></tr>
+
+{{ pass}}
+</tbody>
+</table>
+
+</div>

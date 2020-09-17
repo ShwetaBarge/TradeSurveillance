@@ -201,12 +201,12 @@ db.define_table('front_running_BBS',
 
 
 
-db.define_table('wash_trade_db',
-               Field('brokerId'),
-               Field('firstname'),
-               Field('lastname'),
-               Field('email'),
-               Field('stockSymbol')
+db.define_table('wash_trade_broker',
+                Field('Broker_Id'),
+                Field('Broker_Name'),
+                Field('Email'),
+                Field('stockSymbol'),
+                Field('date_trade')
                 )
 
 db.define_table('tradebook_wash',
@@ -222,3 +222,9 @@ db.define_table('tradebook_wash',
                 Field('price', requires=IS_NOT_EMPTY()),
                 Field('brokerID', requires=IS_NOT_EMPTY())
                 )
+
+db.define_table('broker',
+               Field('Broker_Id'),
+               Field('Broker_Name'),
+               Field('Email')
+               )

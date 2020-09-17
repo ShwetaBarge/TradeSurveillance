@@ -4,26 +4,6 @@ from datetime import datetime
 
 def index(): return dict(message="hello from tradebook.py")
 
-#Takes order from user
-def post():
-    '''
-    Take form information and post it into database
-    params:
-        forms - SQLFORM
-    '''
-    form = SQLFORM(db.tradebook).process()
-    # db.blog - tells to connect this form to blog table that has been created
-    # process() = does the enitre insert in the blog table
-    if form.process().accepted:
-       session.flash = 'form accepted'
-       redirect(URL('view'))
-    elif form.errors:
-       response.flash = 'form has errors'
-    else:
-       response.flash = 'please fill out the form'
-    return locals()
-
-
 def view():
     #Displays Table Tradebook, if empty goes to insert_table
     rows = db(db.tradebook).select() or db.tradebook.import_from_csv_file(open('C:/Users/HP/OneDrive/Desktop/UBS Training/web2py/web2py/applications/watchDogs/Sample Data/tradebook.csv', 'r', encoding='utf-8', newline=''))
@@ -295,11 +275,10 @@ def get_data_washtrade():
                 if(maxSize > sizeThreshold):		
                     print("\n\nDate : {2}\n::: WASH TRADE DETECTED :::\nBroker Id : {0}\nStock Symbol : {1}\n\n".format(brokerId, stockSymbol,checkDate))					
                     found = True
-                    query_1 = "INSERT INTO wash_trade_broker SELECT id,Broker_Id,Broker_Name,Email, email, email FROM broker WHERE Broker_ID  =  {0};".format(brokerId)
-                db(db.wash_trade_broker.Broker_Id == brokerId).select() or db.executesql(query_1)
+                    query = "INSERT INTO wash_trade_broker SELECT id,Broker_Id,Broker_Name,Email, email,Date_trade FROM broker WHERE Broker_ID  =  {0};".format(brokerId)
+                db(db.wash_trade_broker.Broker_Id == brokerId).select() or db.executesql(query)
                 db.wash_trade_broker.update_or_insert(db.wash_trade_broker.Broker_Id == brokerId,
-                           stockSymbol= stockSymbol_attr,
-                                                     date_trade = checkDate)
+                           stockSymbol= stockSymbol_attr)
                 rows = db(db.wash_trade_broker).select()
     if(not found):	
         print("No wash trades detected")
