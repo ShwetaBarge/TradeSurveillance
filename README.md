@@ -4,7 +4,7 @@
 Project to detect fraud such as frontrunning and wash trading.
 <br>
 Technology: Web2py
-Refer 'trade surveillance project.pptx' for understanding.
+Refer 'TradeSurveillance ppt' for understanding (pdf).
 <hr>
 Landing page Views -> tradebook/view.html
 <hr>
