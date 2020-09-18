@@ -1,5 +1,6 @@
 {{extend 'layout.html'}}
 <h1>Brokers Involved in Wash Trades</h1>
+{{=A(T('Download as csv'), _type='button float-right', _href=URL('tradebook', 'export_to_csv_wash_trade'))}}
 <div class= "container">
   <table class="table table-striped">
     <thead>

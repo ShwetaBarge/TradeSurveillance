@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<!-- <h1>Brokers Involved in Wash Trades</h1>
+<h1>Brokers Involved in Wash Trades</h1>
 <div class= "container">
   <table class="table table-striped">
     <thead>
@@ -12,6 +12,3 @@
 {{ pass}}
 </tbody>
 </table>
- -->
-
-{{=firmTradeList}}

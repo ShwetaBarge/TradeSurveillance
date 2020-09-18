@@ -304,3 +304,30 @@ def get_data_washtrade():
     if(not found):	
         print("No wash trades detected")
     return locals()
+
+
+#-----------------------------------------Download as CSVs----------------------------------------
+def export_to_csv_wash_trade():
+    import gluon.contenttype
+    response.headers['Content-Type'] = gluon.contenttype.contenttype('.csv')
+
+    response.headers['Content-disposition'] = 'attachment; filename=Wash_Trade.csv'
+    query = (db.wash_trade_broker.id>0)
+    return str(db(query).select())
+
+
+def export_to_csv_front_running_SSB():
+    import gluon.contenttype
+    response.headers['Content-Type'] = gluon.contenttype.contenttype('.csv')
+
+    response.headers['Content-disposition'] = 'attachment; filename=Frontrunning_SSB.csv'
+    query = (db.front_running_SSB.id>0)
+    return str(db(query).select())
+
+def export_to_csv_front_running_BBS():
+    import gluon.contenttype
+    response.headers['Content-Type'] = gluon.contenttype.contenttype('.csv')
+
+    response.headers['Content-disposition'] = 'attachment; filename=Frontrunning_BBS.csv'
+    query = (db.front_running_BBS.id>0)
+    return str(db(query).select())

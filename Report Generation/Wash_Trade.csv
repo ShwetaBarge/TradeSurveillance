@@ -1,0 +1,6 @@
+wash_trade_broker.id,wash_trade_broker.Broker_Id,wash_trade_broker.Broker_Name,wash_trade_broker.Email,wash_trade_broker.stockSymbol,wash_trade_broker.date_trade
+1,1,Morgan Stanley,brokerdesk@morganstanley.com,WMT,16-09-2020
+2,2,TD Ameritrade,broker@TDameritrade.com,AAPL,16-09-2020
+3,3,Vanguard,brokerdesk@vanguard.com,AAPL,16-09-2020
+4,4,Charles Schwab,broker@charlesschwab.com,AAPL,16-09-2020
+5,5,Fidelity Investments,brokerdesk@fidelityinvestments.com,AAPL,16-09-2020

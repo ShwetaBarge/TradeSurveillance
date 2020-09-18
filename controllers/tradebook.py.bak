@@ -296,8 +296,8 @@ def get_data_washtrade():
                     print("\n\nDate : {2}\n::: WASH TRADE DETECTED :::\nBroker Id : {0}\nStock Symbol : {1}\n\n".format(brokerId, stockSymbol,checkDate))					
                     found = True
                     query_1 = "INSERT INTO wash_trade_broker SELECT id,Broker_Id,Broker_Name,Email, email, email FROM broker WHERE Broker_ID  =  {0};".format(brokerId)
-                db(db.wash_trade_broker.Broker_Id == brokerId).select() or db.executesql(query_1)
-                db.wash_trade_broker.update_or_insert(db.wash_trade_broker.Broker_Id == brokerId,
+                    db(db.wash_trade_broker.Broker_Id == brokerId).select() or db.executesql(query_1)
+                    db.wash_trade_broker.update_or_insert(db.wash_trade_broker.Broker_Id == brokerId,
                            stockSymbol= stockSymbol_attr,
                                                      date_trade = checkDate)
                 rows = db(db.wash_trade_broker).select()
